@@ -22,10 +22,14 @@ channel.exchange_declare(exchange ="hello-exchange")
 
 
 channel.queue_bind(queue="hello", exchange="hello-exchange", 
-	routing_key="hello-dinding-key") 
+	routing_key="hello-binding-key") 
 # binds the exchange and the queue
 
 
+
+channel.basic_publish(
+	exchange="hello-exchange", routing_key="hello-binding-key", 
+	body="Waaaasssss Sup?")
 
 #channel.basic_publish(
 #	exchange="hello-exchange", routing_key="hello-binding-key", body= "Wa sup!")
