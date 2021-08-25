@@ -3,12 +3,8 @@ import pika
 
 
 credentials = pika.PlainCredentials('guest', 'guest')
-#parameters = pika.ConnectionParameters(
-#	'rabbit-server1', 5672, '/', credentials)
-parameters = pika.ConnectionParameters(host="localhost")
-
+parameters = pika.ConnectionParameters(host="localhost",credentials=credentials)
 connection = pika.BlockingConnection(parameters)
-
 channel = connection.channel()
 
 

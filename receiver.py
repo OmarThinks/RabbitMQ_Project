@@ -1,9 +1,8 @@
 import pika
 
-parameters = pika.ConnectionParameters(host="localhost")
-
+credentials = pika.PlainCredentials('guest', 'guest')
+parameters = pika.ConnectionParameters(host="localhost",credentials=credentials)
 connection = pika.BlockingConnection(parameters)
-
 channel = connection.channel()
 
 
