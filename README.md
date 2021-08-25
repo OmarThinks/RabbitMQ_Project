@@ -25,8 +25,17 @@ password: **guest**
 
 
 
+# How it works:
+
+There is a file called **publisher.py**.  
+This file publishes data to the RabbitMQ broker.  
+
+There is another file called **receiver.py**.  
+This received the data and consumes it.
 
 
 
 
+<img src="images/statistics.png">
 
+In this image, the data gets published and received.
